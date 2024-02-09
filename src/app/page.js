@@ -1,8 +1,12 @@
 import ClientComponent from "@/components/client";
-import Image from "next/image";
+import React from "react";
 
-export default function Home() {
-  return (
+
+const Page = () => {
+  return(
     <ClientComponent/>
-  );
+  )
 }
+
+
+export default Page;

@@ -1,12 +1,13 @@
 'use client'
 
+import Image from "next/image";
 import React from "react"
 
 const ClientSection = () => {
     return(
         <>
 
-<section className="recipe_section layout_padding-top">
+        <section className="recipe_section layout_padding-top">
             <div className="container">
                 <div className="heading_container heading_center">
                     <h2>
@@ -17,7 +18,7 @@ const ClientSection = () => {
                     <div className="col-sm-6 col-md-4 mx-auto">
                     <div className="box">
                         <div className="img-box">
-                        <img src="/images/ui-interactive.jpg" className="box-img" alt=""/>
+                        <Image src="/images/ui-interactive.jpg" className="box-img" alt="" height={20} width={20}/>
                         </div>
                         <div className="detail-box">
                         <h4>
@@ -30,11 +31,11 @@ const ClientSection = () => {
                     <div className="col-sm-6 col-md-4 mx-auto">
                     <div className="box">
                         <div className="img-box">
-                        <img src="/images/client4.png" className="box-img" alt=""/>
+                        <Image src="/images/client4.png" className="box-img" alt="" height={20} width={20}/>
                         </div>
                         <div className="detail-box">
                         <h4>
-                            API'S Expose
+                            API Expose
                         </h4>
             
                         </div>
@@ -43,7 +44,7 @@ const ClientSection = () => {
                     <div className="col-sm-6 col-md-4 mx-auto">
                     <div className="box">
                         <div className="img-box">
-                        <img src="/images/client2.jpg" className="box-img" alt=""/>
+                        <Image src="/images/client2.jpg" className="box-img" alt="" height={20} width={20}/>
                         </div>
                         <div className="detail-box">
                         <h4>

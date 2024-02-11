@@ -1,11 +1,25 @@
+
 'use client'
 
-import Image from "next/image";
+import { useEffect } from "react";
 import ClientSection from "./clientSection";
 import Footer from "./footer";
+import axios from "axios";
 
 
 const ClientComponent = () => {
+
+    console.log('hello i am client component')
+    let isServer = (typeof window === 'undefined')? false : true;
+    console.log(isServer, 'is client')
+
+    useEffect(()=>{
+        axios.get('http://195.35.45.131:4000/user?all=true').then((res)=>{
+            console.log(res, 'RESPONSE')
+        })
+
+    })
+
     return(
     <>
         <div className="hero_area">
@@ -13,12 +27,11 @@ const ClientComponent = () => {
                 <div className="container-fluid">
                     <div className="navbar navbar-expand-lg custom_nav-container">
                         <a className="navbar-brand">
-                            <span>NeXtJS CSR</span>
+                            <span></span>
                         </a>
                     </div>
                 </div>
             </header>
-
             <section className="slider_section ">
                 <div className="container ">
                     <div className="row">

@@ -1,27 +1,18 @@
 import React from 'react'
 import Footer from './footer';
+import Header from './header';
 
 
 export async function ServerComponent (){
-
-
     console.log('hello i am server component')
-
     let isServer = (typeof window === 'undefined')? false : true;
     console.log(isServer, 'is Server')
+    let res = await fetch('http://195.35.45.131:4000/user?all=true')
 
     return(
         <>
         <div>
-            <header className="header_section">
-                <div className="container-fluid">
-                    <div className="navbar navbar-expand-lg custom_nav-container">
-                        <a className="navbar-brand">
-                            <span style={{paddingLeft:'40px', color:'black'}}>NeXtJS SSR</span>
-                        </a>
-                    </div>
-                </div>
-            </header>
+            <Header title = {'NeXtJS SSR'} />
             <section className="slider_section ">
                 <div className="container ">
                     <div className="row">
